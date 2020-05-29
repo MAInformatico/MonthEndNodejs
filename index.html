@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>Month End</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" src="js/functionsangular.js"></script>
+
+</head>
+<body>
+	  <noscript>
+        <h1>Checking Javascript</h1>
+        <div class="unavailable">
+            Javascript is not available in your browser.<br />
+            Please,<br />
+            <b><i>active Javascript</i></b>.<br />
+        </div>
+    </noscript>
+    <header>
+    <div id="title">
+		<label><h2>MonthEnd</h2></label>
+	</div>
+    </header>
+
+	<div id="data" ng-app="calculate" ng-controller="ctrl"  align="center">
+		<hr>
+		<div id="table">
+		<label><h3>Monthly fixed costs</h3></label>
+		<table>
+			<tr><td><label id="City">City:</label></td><td><input type="text" ng-model="city"></td></tr>
+			<tr><td><label id="Salary">Salary:</label></td><td><input type="number" ng-model="salary"></td></tr>
+			<tr><td><label id="Rental">Rental bill:</label></td><td><input type="number" ng-model="rentb"></td></tr>
+			<tr><td><label id="Comunity">Comunity bill:</label></td><td><input type="number" ng-model="comub"></td></tr>
+			<tr><td><label id="Electricity">Electricity bill:</label></td><td><input type="number" ng-model="elecb"></td></tr>
+			<tr><td><label id="Water">Water bill:</label></td><td><input type="number" ng-model="watb"></td></tr>
+			<tr><td><label id="Internet">Internet bill:</label></td><td><input type="number" ng-model="intb"></td></tr>
+			<tr><td><label id="Gas">Gas bill:</label></td><td><input type="number" ng-model="gasb"></td></tr>
+		</table>
+		</div>
+		<hr>
+		<div id="button">
+			<button type="button"><a href="javascript:printPDF()">Export to PDF</a></button>
+		</div>
+			<div id="print">
+				<div id="Balance" ng-style="balance">
+					<h3>City: {{city}}</h3>
+					<h3>Salary: {{salary}} euros</h3>
+					<h3>Rental bill: {{rentb}} euros</h3>
+					<h3>Comunity bill: {{comub}} euros</h3>
+					<h3>Electricity bill: {{elecb}} euros</h3>
+					<h3>Water bill: {{watb}} euros</h3>
+					<h3>Internet bill: {{intb}} euros</h3>
+					<h3>Gas bill: {{gasb}} euros</h3>
+
+					<label><h2>Balance (for food, transport etc) if you decide to live in {{city}}:</h2></label>
+			      <h3>{{salary - rentb - comub - elecb - watb - intb - gasb}} euros</h3>
+		  		</div>
+		</div>
+	</div>
+	<footer>
+		<p>Developed by: <a href="https://github.com/MAInformatico/">MAInformatico</a></p>
+		<p>Under: <a href="https://github.com/MAInformatico/MonthEnd/blob/master/LICENSE">Apache License</a></p>
+	</footer>
+</body>
+</html>

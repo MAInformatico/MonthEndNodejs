@@ -1,0 +1,56 @@
+/*CSS file for MonthEnd*/ 
+
+header{
+	display: flex;
+	justify-content: center;
+}
+
+body{
+	background-color: lightsalmon;
+	text-align: center;
+}
+
+#title{
+	display: flex;	
+	justify-content: center;
+	color: blue;
+}
+
+#Salary{
+	font-style: oblique;
+}
+#languages{
+	display: flex;
+	justify-content: flex-end;
+}
+
+#print{
+	display: flex;
+	justify-content: center;
+	background-color: antiquewhite;
+	height:52%;
+	width:38%;
+}
+
+#button{
+	margin-bottom: 10px;
+}
+
+
+h3 {
+  color: black;  
+}
+
+@media only screen and (max-width:620px) {
+  body{
+    width:100%;
+    font-size:10vw;
+  }
+}
+
+footer{
+	display: flex;	
+	justify-content: space-around;
+	font-size: large;
+	align-items: flex-end;
+}
