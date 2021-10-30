@@ -27,6 +27,7 @@
 	<div id="data" ng-app="calculate" ng-controller="ctrl"  align="center">
 		<hr>
 		<div id="table">
+		<form>
 		<label><h3>Monthly fixed costs</h3></label>
 		<table>
 			<tr><td><label id="City">City:</label></td><td><input type="text" ng-model="city"></td></tr>
@@ -38,11 +39,13 @@
 			<tr><td><label id="Internet">Internet bill:</label></td><td><input type="number" ng-model="intb"></td></tr>
 			<tr><td><label id="Gas">Gas bill:</label></td><td><input type="number" ng-model="gasb"></td></tr>
 		</table>
+		<div id="button">
+			<button type="button"><a href="javascript:printPDF()">Export to PDF</a></button>						
+			<input type="reset" value="Clean" />
+		</div>
+		</form>
 		</div>
 		<hr>
-		<div id="button">
-			<button type="button"><a href="javascript:printPDF()">Export to PDF</a></button>
-		</div>
 			<div id="print">
 				<div id="Balance" ng-style="balance">
 					<h3>City: {{city}}</h3>
