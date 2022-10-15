@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <title>Month End</title>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
@@ -15,7 +16,7 @@
         <div class="unavailable">
             Javascript is not available in your browser.<br />
             Please,<br />
-            <b><i>active Javascript</i></b>.<br />
+            <strong>active Javascript</strong>.<br />
         </div>
     </noscript>
     <header>
@@ -24,28 +25,25 @@
 	</div>
     </header>
 
-	<div id="data" ng-app="calculate" ng-controller="ctrl"  align="center">
+	<div id="data" ng-app="calculate" ng-controller="ctrl">
 		<hr>
-		<div id="table">
-		<form>
-		<label><h3>Monthly fixed costs</h3></label>
-		<table>
-			<tr><td><label id="City">City:</label></td><td><input type="text" ng-model="city"></td></tr>
-			<tr><td><label id="Salary">Salary:</label></td><td><input type="number" ng-model="salary"></td></tr>
-			<tr><td><label id="Rental">Rental bill:</label></td><td><input type="number" ng-model="rentb"></td></tr>
-			<tr><td><label id="Comunity">Comunity bill:</label></td><td><input type="number" ng-model="comub"></td></tr>
-			<tr><td><label id="Electricity">Electricity bill:</label></td><td><input type="number" ng-model="elecb"></td></tr>
-			<tr><td><label id="Water">Water bill:</label></td><td><input type="number" ng-model="watb"></td></tr>
-			<tr><td><label id="Internet">Internet bill:</label></td><td><input type="number" ng-model="intb"></td></tr>
-			<tr><td><label id="Gas">Gas bill:</label></td><td><input type="number" ng-model="gasb"></td></tr>
+		<div id="divtable">		
+		<table id="table">
+			<caption>Monthly fixed costs</caption>
+			<tr><th scope="col">City:</th><td><input type="text" ng-model="city"></td></tr>
+			<tr><th scope="col">Salary:</th><td><input type="number" ng-model="salary"></td></tr>
+			<tr><th scope="col">Rental bill:</th><td><input type="number" ng-model="rentb"></td></tr>
+			<tr><th scope="col">Comunity bill:</th><td><input type="number" ng-model="comub"></td></tr>
+			<tr><th scope="col">Electricity bill:</th><td><input type="number" ng-model="elecb"></td></tr>
+			<tr><th scope="col">Water bill:</th><td><input type="number" ng-model="watb"></td></tr>
+			<tr><th scope="col">Internet bill:</th><td><input type="number" ng-model="intb"></td></tr>
+			<tr><th scope="col">Gas bill:</th><td><input type="number" ng-model="gasb"></td></tr>
 		</table>
-		<div id="button">
-			<button type="button"><a href="javascript:printPDF()">Export to PDF</a></button>						
-			<input type="reset" value="Clean" />
-		</div>
-		</form>
 		</div>
 		<hr>
+		<div id="button">
+			<button type="button"><a href="javascript:printPDF()">Export to PDF</a></button>
+		</div>
 			<div id="print">
 				<div id="Balance" ng-style="balance">
 					<h3>City: {{city}}</h3>
